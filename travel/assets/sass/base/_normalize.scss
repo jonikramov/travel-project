@@ -75,6 +75,8 @@
 
   a {
     background-color: transparent;
+    text-decoration: none;
+    
   }
 
   /**
@@ -361,6 +363,7 @@ section, main, footer, header, article {
 ul, li {
   padding: 0;
   list-style: none;
+  margin: 0;
 
 }
 

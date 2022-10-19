@@ -1,25 +1,19 @@
 .navigation {
     display: flex;
-    font-size: 1.5rem;
-    line-height: 2.8rem;
+    gap: 42px;
+    color: $color-light;    
 }
 
-.navigation__link {
-    list-style: none;
-    padding: 0 10px;
-    cursor: pointer;
+.navigation__link > a {
+    color:$color-light;
     @extend %transition;
+    user-select: none;
 
     &:hover {
-        color: $color-primary;
+        color: $color-additional;
     }
 }
 
-.header__navigation {
-    @include media-tablet {
-        display: none;
-    }
-}
 
 
 

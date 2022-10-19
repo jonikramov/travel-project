@@ -1,34 +1,36 @@
 .logo {
     display: flex;
+    flex-direction: row;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
 
-}
-
-.logo-object {
-    @include media-mobile {
-        width: 160px;
+    &:hover {
+        .logo__text {
+            color: $color-additional;
+        }
+        .logo__icon {
+            background: url(/assets/img/icons/logo-green.svg);
+        }
     }
+    
 }
 
-.logo-path {
+.logo__icon {
+    background: url(/assets/img/icons/logo.svg);
+    width: 30px;
+    height: 30px;
     @extend %transition;
 }
 
-.logo-svg:hover {
-    .logo-path {
-        fill: $color-primary;
-    }
+.logo__text {
+    @extend %font-add;
+    @include font($size: 3.2rem, $height: 3.9rem);
+    color: $color-light;
+    user-select: none;
+    @extend %transition;
+ 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
