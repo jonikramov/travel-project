@@ -342,7 +342,7 @@ body, .button {
   font-family: "Red Hat Text", "Verdana", sans-serif;
 }
 
-.steps-item__text, .preview__search-text, .preview__subtitle, .logo__text, h1 {
+.read-more, .article-info__text, .steps-item__text, .preview__search-text, .preview__subtitle, .logo__text, h3, h1 {
   font-family: "Aleo", "Verdana", sans-serif;
 }
 
@@ -388,7 +388,12 @@ body, .button {
   line-height: 3.2rem;
   font-weight: 500;
   font-style: normal;
-  padding: 13.5px 31px 13.5px 33.5px;
+  display: flex;
+  justify-content: center;
+  gap: 12.5px;
+  align-items: center;
+  width: 228px;
+  height: 59px;
 }
 .button_add:hover {
   background: #F2785C;
@@ -424,6 +429,14 @@ h2 {
   font-weight: normal;
   font-style: normal;
   color: #F2785C;
+}
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 4.2rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(13, 96, 111);
 }
 
 .logo {
@@ -462,9 +475,10 @@ h2 {
 }
 
 .button-arrow {
+  display: block;
   background: url(/assets/img/icons/arrow.svg);
-  width: 35px;
-  height: 22.5px;
+  width: 33px;
+  height: 23px;
 }
 
 .wrapper {
@@ -592,7 +606,7 @@ h2 {
 }
 
 .destinations {
-  padding: 0 0 80px;
+  padding: 0 0 40px;
   overflow: hidden;
 }
 
@@ -640,6 +654,70 @@ h2 {
 }
 
 .destinations-button {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 80px;
+}
+
+.stories__title {
+  text-align: center;
+}
+
+.stories {
+  position: relative;
+  background-image: url(/assets/img/background/background-2.jpg);
+  height: 1331px;
+}
+
+.stories__wrapper {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.stories__wrapper {
+  padding-top: 40px;
+  padding-bottom: 41px;
+  position: relative;
+}
+
+.stories-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.article {
+  display: flex;
+  gap: 40px;
+}
+
+.article__image {
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px #0D606F;
+}
+
+.article-info__title {
+  margin-bottom: 24px;
+}
+
+.article-info__text {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(13, 96, 111);
+}
+
+.read-more {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(13, 96, 111);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.stories-button {
   display: flex;
   justify-content: center;
   margin-top: 40px;

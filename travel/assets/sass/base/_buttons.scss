@@ -29,7 +29,13 @@
 
     &_add {
         @include font($size: 2.4rem, $height: 3.2rem, $weight:500);
-        padding: 13.5px 31px 13.5px 33.5px;
+        display: flex;
+        justify-content: center;
+        gap: 12.5px;
+        align-items: center;
+        width: 228px;
+        height: 59px;
+   
         &:hover {
             background: $color-primary;
         }
