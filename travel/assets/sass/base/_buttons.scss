@@ -1,0 +1,63 @@
+.button {
+    @extend %font-primary;
+    @include font($size: 1.6rem, $height: 2.2rem, $weight:500);
+    color: $color-light;
+    background: $color-additional;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    cursor: pointer;
+    @extend %transition;
+    user-select: none;
+    border-radius: 10px;
+
+    &_header {
+        padding: 10px 30px;
+
+        &:hover {
+            color: $color-additional;
+            background: $color-light;
+        }
+    }
+
+    &_primary {
+        @include font($size: 2.4rem, $height: 3.2rem, $weight:500);
+        padding: 13.5px 32.5px;
+        &:hover {
+            background: $color-primary;
+        }
+    }
+
+    &_add {
+        @include font($size: 2.4rem, $height: 3.2rem, $weight:500);
+        display: flex;
+        justify-content: center;
+        gap: 12.5px;
+        align-items: center;
+        width: 228px;
+        height: 59px;
+   
+        &:hover {
+            background: $color-primary;
+        }
+    }
+
+
+
+
+
+
+
+}
+
+// .link-bottom {
+//     @extend %font-add;
+//     color: $color-primary;
+//     display: inline-flex;
+//     align-items: center;
+
+// }
+
+// .link-bottom__text {
+//     margin-left: 9px;
+// }
+

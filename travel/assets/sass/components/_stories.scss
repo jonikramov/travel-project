@@ -1,0 +1,84 @@
+.stories__title {
+    text-align: center;
+}
+
+.stories {
+    position: relative;
+    background-image: url(/assets/img/background/background-2.jpg);
+    height: 1331px;
+}
+
+.stories__wrapper {
+    background: rgba(255, 255, 255, 0.7);    
+}
+
+.stories__wrapper {
+    padding-top: 40px;
+    padding-bottom: 41px;
+    position: relative;
+}
+
+.stories-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.article {
+    display: flex;
+    gap: 40px;
+}
+
+.article__image {
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px #0D606F;
+}
+
+.article-info__title {
+    margin-bottom: 24px;
+}
+
+.article-info__text {
+    @extend %font-add;
+    @include font ($size: 2.0rem, $height: 2.4rem);
+    color: $color-additional;
+}
+
+.read-more {
+    @extend %font-add;
+    @include font ($size: 2.0rem, $height: 2.4rem);
+    color: $color-additional;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.stories-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+.navigation {
+    display: flex;
+    gap: 42px;
+}
+
+.navigation__link > a {
+    color:$color-light;
+    @extend %transition;
+    user-select: none;
+
+    &:hover {
+        color: $color-additional;
+    }
+}
+
+
+
+
