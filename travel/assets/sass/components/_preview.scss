@@ -4,4 +4,37 @@
     width: 1440px;
     height: 765px;
     margin-top: -92px;
+    padding-top: 122px;
 }
+
+
+.preview__subtitle {
+    @extend %font-add;
+    @include font($size: 2.0rem, $height: 2.4rem, $weight:700, $style:italic);
+    margin: 35px 0 45px;
+}
+
+.preview__search {
+    max-width: 892px;
+    height: 95px;
+    background: $color-search;
+    border-radius: 16px;
+    padding: 18px 18px 18px 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview__search-text {
+    color: $color-primary;
+    @extend %font-add;
+    @include font($size: 2.4rem, $height: 2.9rem, $weight: normal, $style: italic);
+
+}
+
+
+
+
+
+
+
