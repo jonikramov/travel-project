@@ -4,12 +4,13 @@
 
 .stories {
     position: relative;
-    background-image: url(/assets/img/background/background-2.jpg);
+    background: url("/assets/img/background/background-2.jpg");
+    width: 1440px;
     height: 1331px;
 }
 
 .stories__wrapper {
-    background: rgba(255, 255, 255, 0.7);    
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .stories__wrapper {
