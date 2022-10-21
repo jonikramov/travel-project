@@ -10,14 +10,14 @@
             color: $color-additional;
         }
         .logo__icon {
-            background: url(/assets/img/icons/logo-green.svg);
+            background: url(../../assets/img/icons/logo-green.svg);
         }
     }
-    
+
 }
 
 .logo__icon {
-    background: url(/assets/img/icons/logo.svg);
+    background: url(../../assets/img/icons/logo.svg);
     width: 30px;
     height: 30px;
     @extend %transition;
@@ -29,7 +29,7 @@
     color: $color-light;
     user-select: none;
     @extend %transition;
- 
+
 }
 
 
