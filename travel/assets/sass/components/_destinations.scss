@@ -43,7 +43,11 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: $color-primary;
+    background: $color-non-active;
+
+    &-active {
+        background: $color-primary;
+    }
 }
 
 .destinations-button {
