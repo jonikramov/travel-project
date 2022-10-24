@@ -24,6 +24,9 @@
                 </ul>
             </nav>
             <button class="button button_header" type="button">Login</button>
+            <div class="hamburger">
+                <span class="hamburger__line"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -43,19 +46,28 @@
                 <div class="steps-info">
                     <div class="steps-item">
                         <div class="steps-item__img">
-                            <img src="assets/img/icons/bike.svg" alt="bike">
+                            <picture>
+                                <source media="(min-width:391px)" srcset="assets/img/icons/bike.svg">
+                                <img src="assets/img/icons/bike-mobile.svg" alt="Flowers">
+                            </picture>
                         </div>
                         <p class="steps-item__text">Tell us what you want to do</p>
                     </div>
                     <div class="steps-item">
                         <div class="steps-item__img">
-                            <img src="assets/img/icons/calendar.svg" alt="calendar">
+                            <picture>
+                                <source media="(min-width:391px)" srcset="assets/img/icons/calendar.svg">
+                                <img src="assets/img/icons/calendar-mobile.svg" alt="Flowers">
+                            </picture>
                         </div>
                         <p class="steps-item__text">Share us preferable dates </p>
                     </div>
                     <div class="steps-item">
                         <div class="steps-item__img">
-                            <img src="assets/img/icons/airplane.svg" alt="airplane">
+                            <picture>
+                                <source media="(min-width:391px)" srcset="assets/img/icons/airplane.svg">
+                                <img src="assets/img/icons/airplane-mobile.svg" alt="Flowers">
+                            </picture>
                         </div>
                         <p class="steps-item__text">We will give you recommendations</p>
                     </div>
@@ -81,6 +93,9 @@
                         <p class="slider__item-text">USA</p>
                     </div>
                 </div>
+                <div class="slider-mobile">
+
+                </div>
                 <div class="slider-buttons">
                     <div class="slider-button"></div>
                     <div class="slider-button slider-button-active"></div>
@@ -92,51 +107,53 @@
                       Find More
                     </button>
                 </div>
-                <h2 class="stories__title">TRAVEL STORIES</h2>
             </div>
         </section>
         <section class="stories" id="stories">
-            <div class="wrapper stories__wrapper">
-                <div class="stories__container">
-                    <div class="stories-articles">
-                        <article class="article">
-                            <img class="article__image" src="assets/img/stories/1.jpg" alt="Thailand">
-                            <div class="article-info">
-                                <h3 class="article-info__title">10 Photos of Attractive Thailand</h3>
-                                <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                <p class="read-more">Read More</p>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <img class="article__image" src="assets/img/stories/2.jpg" alt="Utah">
-                            <div class="article-info">
-                                <h3 class="article-info__title">Canyonlands National Park, Utah</h3>
-                                <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                <p class="read-more">Read More</p>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <img class="article__image" src="assets/img/stories/3.jpg" alt="Canada">
-                            <div class="article-info">
-                                <h3 class="article-info__title">I left my heart in the Mountains!</h3>
-                                <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                <p class="read-more">Read More</p>
-                            </div>
-                        </article>
-                        <article class="article">
-                            <img class="article__image" src="assets/img/stories/4.jpg" alt="USA">
-                            <div class="article-info">
-                                <h3 class="article-info__title">The Longest journey in my life!</h3>
-                                <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                <p class="read-more">Read More</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="stories-button">
-                        <button class="button button_add">
-                          <img src="assets/img/icons/arrow.svg" alt="arrow">
-                          See More
-                        </button>
+            <h2 class="stories__title">TRAVEL STORIES</h2>
+            <div class="stories__background">
+                <div class="wrapper stories__wrapper">
+                    <div class="stories__container">
+                        <div class="stories-articles">
+                            <article class="article">
+                                <img class="article__image" src="assets/img/stories/1.jpg" alt="Thailand">
+                                <div class="article-info">
+                                    <h3 class="article-info__title">10 Photos of Attractive Thailand</h3>
+                                    <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                    <p class="read-more">Read More</p>
+                                </div>
+                            </article>
+                            <article class="article">
+                                <img class="article__image" src="assets/img/stories/2.jpg" alt="Utah">
+                                <div class="article-info">
+                                    <h3 class="article-info__title">Canyonlands National Park, Utah</h3>
+                                    <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                    <p class="read-more">Read More</p>
+                                </div>
+                            </article>
+                            <article class="article">
+                                <img class="article__image" src="assets/img/stories/3.jpg" alt="Canada">
+                                <div class="article-info">
+                                    <h3 class="article-info__title">I left my heart in the Mountains!</h3>
+                                    <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                    <p class="read-more">Read More</p>
+                                </div>
+                            </article>
+                            <article class="article">
+                                <img class="article__image" src="assets/img/stories/4.jpg" alt="USA">
+                                <div class="article-info">
+                                    <h3 class="article-info__title">The Longest journey in my life!</h3>
+                                    <p class="article-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                    <p class="read-more">Read More</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="stories-button">
+                            <button class="button button_add">
+                              <img src="assets/img/icons/arrow.svg" alt="arrow">
+                              See More
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,3 +180,7 @@
     </footer>
 </body>
 </html>
+
+
+
+

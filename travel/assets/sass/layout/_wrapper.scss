@@ -3,11 +3,31 @@
     margin: 0 auto;
     padding: 0 120px;
 
-    // @include media-laptop {
-    //     padding: 0 46px;
-    // }
 
-    // @include media-mobile {
-    //     padding: 0 21px;
-    // }
+    @include media-mobile {
+        max-width: 390px;
+        padding: 0 15px;
+
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
