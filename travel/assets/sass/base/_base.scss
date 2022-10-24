@@ -29,6 +29,9 @@ h1 {
 h2 {
     @include font ($size: 4.0rem, $height: 5.3rem);
     color: $color-primary;
+    @include media-mobile {
+        @include font ($size: 1.4rem, $height: 1.85rem);
+    }
 }
 
 h3 {

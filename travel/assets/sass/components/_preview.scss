@@ -7,13 +7,29 @@
     width: 100%;
     margin-top: -92px;
     padding-top: 122px;
+    @include media-mobile {
+        background-image: url(../../assets/img/background/background-mobile.jpg);
+        height: 251px;
+        padding-top: 142px;
+        margin-top: -100px;
+    }
 }
 
+.preview__title {
+    @include media-mobile {
+        display: none;
+    }
+}
 
 .preview__subtitle {
     @extend %font-add;
     @include font($size: 2.0rem, $height: 2.4rem, $weight:700, $style:italic);
     margin: 35px 0 45px;
+
+    @include media-mobile {
+        display: none;
+
+    }
 }
 
 .preview__search {
@@ -25,12 +41,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-mobile {
+        max-width: 360px;
+        height: 48px;
+        padding: 9px 9px 9px 16.55px;
+    }
 }
 
 .preview__search-text {
     color: $color-primary;
     @extend %font-add;
     @include font($size: 2.4rem, $height: 2.9rem, $weight: normal, $style: italic);
+
+    @include media-mobile {
+        @include font($size: 1.4rem, $height: 1.68rem, $weight: normal, $style: italic);
+    }
 
 }
 

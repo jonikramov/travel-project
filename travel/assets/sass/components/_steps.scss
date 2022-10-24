@@ -1,7 +1,10 @@
 .steps {
     padding: 80px 0 97px;
-}
+    @include media-mobile {
+        padding: 20px 0 22px;
+    }
 
+}
 
 .steps__title {
     text-align: center;
@@ -11,17 +14,29 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    @include media-mobile {
+        margin-top: 20px;
+    }
 
     & > div:first-child {
         padding-left: 10px;
+        @include media-mobile {
+            padding: 0;
+        }
     }
 
     & > div:nth-child(2) {
         padding-left: 70px;
+        @include media-mobile {
+            padding: 0;
+        }
     }
 
     & > div:last-child {
         padding-right: 12px;
+        @include media-mobile {
+            padding: 0;
+        }
     }
 }
 
@@ -31,6 +46,10 @@
     align-items: center;
     gap: 30px;
     cursor: pointer;
+    @include media-mobile {
+        gap: 20px;
+    }
+
 
 }
 
@@ -42,13 +61,22 @@
     height: 100px;
     border-radius: 16px;
     background-color: $color-primary;
+    @include media-mobile {
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 .steps-item__text {
     @extend %font-add;
     @include font($size: 2.0rem, $height: 2.4rem, $weight:normal);
-
     color: $color-additional;
+    @include media-mobile {
+        @include font($size: 1.0rem, $height: 1.2rem, $weight:normal);
+        text-align: center;
+        width: 80px;
+    }
 }
 
 
