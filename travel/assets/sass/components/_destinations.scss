@@ -1,18 +1,27 @@
 .destinations {
     padding: 0 0 80px;
     overflow: hidden;
+    @include media-mobile {
+        padding: 0 0 20px;
+    }
 }
 
 
 .destinations__title {
     text-align: center;
     margin-bottom: 46px;
+    @include media-mobile {
+        margin-bottom: 20px;
+    }
 }
 
 .slider {
     display: flex;
     justify-content: center;
     gap: 60px;
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .slider__item {
@@ -37,6 +46,9 @@
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .slider-button {
@@ -54,14 +66,72 @@
     display: flex;
     justify-content: center;
     margin: 40px 0 0px;
+    @include media-mobile {
+        margin: 5px 0 0px;
+    }
 }
 
 
+.slider-mobile {
+    display: none;
+    @include media-mobile {
+        display: block;
+        position: relative;
+    }
+}
+
+.slider-mobile__item-img {
+    border-radius: 16px;
+}
+
+.slider-mobile__item-text {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    @include font($size: 2.0rem, $height: 2.65rem, $weight:normal);
+}
+
+.slider-mobile-arrow-right {
+    position: absolute;
+    background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+    width: 15px;
+    height: 26px;
+    top: 93px;
+    right: 11px;
+}
+
+.slider-mobile-arrow-left {
+    position: absolute;
+    background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+    width: 15px;
+    height: 26px;
+    transform: rotate(-180deg);
+    top: 93px;
+    left: 11px;
+}
+
+.slider-mobile-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
 
 
+}
 
+.slider-mobile-button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $color-non-active;
 
-
+    &-active {
+        background: $color-primary;
+    }
+}
 
 
 
