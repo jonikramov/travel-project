@@ -73,7 +73,11 @@
 
 
 .slider-mobile {
-    position: relative;
+    display: none;
+    @include media-mobile {
+        display: block;
+        position: relative;
+    }
 }
 
 .slider-mobile__item-img {
