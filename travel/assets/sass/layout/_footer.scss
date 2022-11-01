@@ -10,6 +10,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-mobile {
+        justify-content: center;
+    }
+}
+
+.rs-school-link {
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.footer__text {
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .socials {

@@ -412,6 +412,17 @@ body, .button {
 .button_add:hover {
   background: #F2785C;
 }
+@media (max-width: 500px) {
+  .button_add {
+    font-size: 1.1rem;
+    line-height: 1.46rem;
+    font-weight: 500;
+    font-style: normal;
+    width: 92px;
+    height: 30px;
+    gap: 6.6px;
+  }
+}
 
 html {
   font-size: 10px;
@@ -461,6 +472,14 @@ h3 {
   font-weight: normal;
   font-style: normal;
   color: rgb(13, 96, 111);
+}
+@media (max-width: 500px) {
+  h3 {
+    font-size: 1.1rem;
+    line-height: 1.32rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .logo {
@@ -594,6 +613,23 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .footer__wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .rs-school-link {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__text {
+    display: none;
+  }
 }
 
 .socials {
@@ -850,16 +886,31 @@ h3 {
   padding: 0 0 80px;
   overflow: hidden;
 }
+@media (max-width: 500px) {
+  .destinations {
+    padding: 0 0 20px;
+  }
+}
 
 .destinations__title {
   text-align: center;
   margin-bottom: 46px;
+}
+@media (max-width: 500px) {
+  .destinations__title {
+    margin-bottom: 20px;
+  }
 }
 
 .slider {
   display: flex;
   justify-content: center;
   gap: 60px;
+}
+@media (max-width: 500px) {
+  .slider {
+    display: none;
+  }
 }
 
 .slider__item {
@@ -886,6 +937,11 @@ h3 {
   gap: 10px;
   margin-top: 20px;
 }
+@media (max-width: 500px) {
+  .slider-buttons {
+    display: none;
+  }
+}
 
 .slider-button {
   width: 20px;
@@ -902,10 +958,77 @@ h3 {
   justify-content: center;
   margin: 40px 0 0px;
 }
+@media (max-width: 500px) {
+  .destinations-button {
+    margin: 5px 0 0px;
+  }
+}
+
+.slider-mobile {
+  position: relative;
+}
+
+.slider-mobile__item-img {
+  border-radius: 16px;
+}
+
+.slider-mobile__item-text {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 2rem;
+  line-height: 2.65rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slider-mobile-arrow-right {
+  position: absolute;
+  background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+  width: 15px;
+  height: 26px;
+  top: 93px;
+  right: 11px;
+}
+
+.slider-mobile-arrow-left {
+  position: absolute;
+  background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+  width: 15px;
+  height: 26px;
+  transform: rotate(-180deg);
+  top: 93px;
+  left: 11px;
+}
+
+.slider-mobile-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 17px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.slider-mobile-button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(242, 120, 92, 0.5);
+}
+.slider-mobile-button-active {
+  background: #F2785C;
+}
 
 .stories__title {
   text-align: center;
   margin-bottom: 40px;
+}
+@media (max-width: 500px) {
+  .stories__title {
+    margin-bottom: 10px;
+  }
 }
 
 .stories__background {
@@ -913,16 +1036,25 @@ h3 {
   width: 100%;
   height: 1331px;
 }
+@media (max-width: 500px) {
+  .stories__background {
+    background-image: url(../../assets/img/background/background-2-mobile.jpg);
+    height: 693px;
+  }
+}
 
 .stories__wrapper {
   background: rgba(255, 255, 255, 0.7);
   height: 1270px;
-}
-
-.stories__wrapper {
   padding-top: 40px;
   padding-bottom: 41px;
   position: relative;
+}
+@media (max-width: 500px) {
+  .stories__wrapper {
+    padding-top: 10px;
+    height: 628px;
+  }
 }
 
 .stories-articles {
@@ -930,27 +1062,62 @@ h3 {
   flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 500px) {
+  .stories-articles {
+    gap: 15px;
+  }
+}
 
 .article {
   display: flex;
   gap: 40px;
 }
+@media (max-width: 500px) {
+  .article {
+    gap: 10px;
+  }
+}
 
 .article__image {
+  height: 130px;
+}
+
+.article__image img {
   border-radius: 16px;
   box-shadow: 0px 4px 4px #0D606F;
+}
+
+@media (max-width: 500px) {
+  .article-info {
+    margin-top: 5px;
+  }
 }
 
 .article-info__title {
   margin-bottom: 24px;
 }
+@media (max-width: 500px) {
+  .article-info__title {
+    margin-bottom: 10px;
+  }
+}
 
 .article-info__text {
+  height: 86px;
+  overflow: hidden;
   font-size: 2rem;
   line-height: 2.4rem;
   font-weight: normal;
   font-style: normal;
   color: rgb(13, 96, 111);
+}
+@media (max-width: 500px) {
+  .article-info__text {
+    font-size: 0.9rem;
+    line-height: 1.08rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .read-more {
@@ -962,9 +1129,22 @@ h3 {
   text-decoration: underline;
   cursor: pointer;
 }
+@media (max-width: 500px) {
+  .read-more {
+    font-size: 0.9rem;
+    line-height: 1.08rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 
 .stories-button {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+}
+@media (max-width: 500px) {
+  .stories-button {
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
