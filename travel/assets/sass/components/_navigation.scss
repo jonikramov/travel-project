@@ -2,7 +2,7 @@
     display: flex;
     gap: 42px;
 
-    @include media-mobile {
+    @include media-laptop {
         display: none;
     }
 

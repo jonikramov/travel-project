@@ -30,8 +30,8 @@
     color: $color-light;
     user-select: none;
     @extend %transition;
-
-    @include media-mobile {
+    
+    @include media-laptop {
         display: none;
     }
 

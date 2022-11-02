@@ -17,10 +17,10 @@
     margin-right: 9px;
 
 
-    @include media-mobile {
+    @include media-laptop {
         display: inline-block;
     }
-
+ 
     &:before {
         @extend %hamburger-line;
         top: 0;
