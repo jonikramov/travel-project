@@ -15,11 +15,6 @@
     }
 }
 
-.preview__title {
-    @include media-mobile {
-        display: none;
-    }
-}
 
 .preview__subtitle {
     @extend %font-add;
@@ -28,7 +23,6 @@
 
     @include media-mobile {
         display: none;
-
     }
 }
 
@@ -42,8 +36,8 @@
     justify-content: space-between;
     align-items: center;
 
-    @include media-mobile {
-        max-width: 360px;
+    @include media-tablet {
+        max-width: 500px;
         height: 48px;
         padding: 9px 9px 9px 16.55px;
     }
@@ -54,7 +48,7 @@
     @extend %font-add;
     @include font($size: 2.4rem, $height: 2.9rem, $weight: normal, $style: italic);
 
-    @include media-mobile {
+    @include media-tablet {
         @include font($size: 1.4rem, $height: 1.68rem, $weight: normal, $style: italic);
     }
 
