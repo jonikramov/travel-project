@@ -7,6 +7,16 @@
     width: 100%;
     margin-top: -92px;
     padding-top: 122px;
+
+    @include media-laptop {
+        height: 600px;
+    }
+
+    @include media-tablet {
+        height: 450px;
+    }
+
+
     @include media-mobile {
         background-image: url(../../assets/img/background/background-mobile.jpg);
         height: 251px;
@@ -20,6 +30,10 @@
     @extend %font-add;
     @include font($size: 2.0rem, $height: 2.4rem, $weight:700, $style:italic);
     margin: 35px 0 45px;
+
+    @include media-tablet {
+        @include font($size: 1.4rem, $weight:700, $style:italic);
+    }
 
     @include media-mobile {
         display: none;

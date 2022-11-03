@@ -762,6 +762,16 @@ h3 {
   margin-top: -92px;
   padding-top: 122px;
 }
+@media (max-width: 1150px) {
+  .preview {
+    height: 600px;
+  }
+}
+@media (max-width: 850px) {
+  .preview {
+    height: 450px;
+  }
+}
 @media (max-width: 600px) {
   .preview {
     background-image: url(../../assets/img/background/background-mobile.jpg);
@@ -777,6 +787,14 @@ h3 {
   font-weight: 700;
   font-style: italic;
   margin: 35px 0 45px;
+}
+@media (max-width: 850px) {
+  .preview__subtitle {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+  }
 }
 @media (max-width: 600px) {
   .preview__subtitle {
@@ -919,10 +937,19 @@ h3 {
   color: rgb(13, 96, 111);
   text-align: center;
 }
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
   .steps-item__text {
     font-size: 1.75rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
+    font-weight: normal;
+    font-style: normal;
+    width: 80px;
+  }
+}
+@media (max-width: 850px) {
+  .steps-item__text {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     font-weight: normal;
     font-style: normal;
     width: 80px;
@@ -952,6 +979,16 @@ h3 {
   text-align: center;
   margin-bottom: 46px;
 }
+@media (max-width: 1150px) {
+  .destinations__title {
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 850px) {
+  .destinations__title {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 600px) {
   .destinations__title {
     margin-bottom: 20px;
@@ -976,6 +1013,24 @@ h3 {
 .slider__item-img {
   border-radius: 16px;
 }
+@media (max-width: 1435px) {
+  .slider__item-img {
+    width: 700px;
+    height: 700px;
+  }
+}
+@media (max-width: 1150px) {
+  .slider__item-img {
+    width: 550px;
+    height: 550px;
+  }
+}
+@media (max-width: 850px) {
+  .slider__item-img {
+    width: 400px;
+    height: 400px;
+  }
+}
 
 .slider__item-text {
   font-size: 3.2rem;
@@ -985,6 +1040,22 @@ h3 {
   position: absolute;
   left: 15px;
   bottom: 45px;
+}
+@media (max-width: 1150px) {
+  .slider__item-text {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@media (max-width: 850px) {
+  .slider__item-text {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .slider-buttons {

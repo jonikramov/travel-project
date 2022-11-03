@@ -50,6 +50,8 @@
             background: $color-primary;
         }
 
+
+
         @include media-mobile {
             @include font($size: 1.1rem, $height: 1.46rem, $weight:500);
             width: 92px;
@@ -65,16 +67,4 @@
 
 
 }
-
-// .link-bottom {
-//     @extend %font-add;
-//     color: $color-primary;
-//     display: inline-flex;
-//     align-items: center;
-
-// }
-
-// .link-bottom__text {
-//     margin-left: 9px;
-// }
 
