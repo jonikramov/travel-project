@@ -1,5 +1,15 @@
 .steps {
     padding: 80px 0 97px;
+
+    @include media-laptop {
+        padding: 60px 0 60px;
+    }
+
+    @include media-tablet {
+        padding: 40px 0 40px;
+    }
+
+
     @include media-mobile {
         padding: 20px 0 22px;
     }
@@ -20,14 +30,14 @@
 
     & > div:first-child {
         padding-left: 10px;
-        @include media-mobile {
+        @include media-dekstop {
             padding: 0;
         }
     }
 
     & > div:nth-child(2) {
         padding-left: 70px;
-        @include media-mobile {
+        @include media-dekstop {
             padding: 0;
         }
     }
@@ -61,6 +71,13 @@
     height: 100px;
     border-radius: 16px;
     background-color: $color-primary;
+
+    @include media-tablet {
+        width: 85px;
+        height: 85px;
+    }
+
+
     @include media-mobile {
         width: 70px;
         height: 70px;
@@ -72,9 +89,21 @@
     @extend %font-add;
     @include font($size: 2.0rem, $height: 2.4rem, $weight:normal);
     color: $color-additional;
+    text-align: center;
+
+    @include media-laptop {
+        @include font($size: 1.75rem, $weight:normal);
+        width: 80px;
+    }
+
+    @include media-tablet {
+        @include font($size: 1.5rem, $weight:normal);
+        width: 80px;
+    }
+
+
     @include media-mobile {
         @include font($size: 1.0rem, $height: 1.2rem, $weight:normal);
-        text-align: center;
         width: 80px;
     }
 }

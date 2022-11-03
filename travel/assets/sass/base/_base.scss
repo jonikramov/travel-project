@@ -21,16 +21,34 @@ h1 {
     @extend %font-add;
     @include font($size: 8.0rem, $height: 9.6rem, $weight:700);
     max-width: 892px;
-    // @include media-mobile {
-    //     @include font($size: 3.2rem, $height: 4.2rem);
-    // }
+
+    @include media-laptop {
+        @include font($size: 6.0rem, $weight:700);
+    }
+
+    @include media-tablet {
+        @include font($size: 4.0rem, $weight:700);
+    }
+
+    @include media-mobile {
+        display: none;
+    }
 }
 
 h2 {
     @include font ($size: 4.0rem, $height: 5.3rem);
     color: $color-primary;
+
+    @include media-laptop{
+        @include font ($size: 3.0rem);
+    }
+
+    @include media-tablet {
+        @include font ($size: 2.0rem);
+    }
+
     @include media-mobile {
-        @include font ($size: 1.4rem, $height: 1.85rem);
+        @include font ($size: 1.4rem);
     }
 }
 
