@@ -478,10 +478,26 @@ h2 {
   font-style: normal;
   color: #F2785C;
 }
+@media (max-width: 1150px) {
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@media (max-width: 850px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 @media (max-width: 600px) {
   h2 {
     font-size: 1.4rem;
-    line-height: 1.85rem;
+    line-height: 1.4rem;
     font-weight: normal;
     font-style: normal;
   }
@@ -805,6 +821,16 @@ h3 {
 .steps {
   padding: 80px 0 97px;
 }
+@media (max-width: 1150px) {
+  .steps {
+    padding: 60px 0 60px;
+  }
+}
+@media (max-width: 850px) {
+  .steps {
+    padding: 40px 0 40px;
+  }
+}
 @media (max-width: 600px) {
   .steps {
     padding: 20px 0 22px;
@@ -828,7 +854,7 @@ h3 {
 .steps-info > div:first-child {
   padding-left: 10px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1435px) {
   .steps-info > div:first-child {
     padding: 0;
   }
@@ -836,7 +862,7 @@ h3 {
 .steps-info > div:nth-child(2) {
   padding-left: 70px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1435px) {
   .steps-info > div:nth-child(2) {
     padding: 0;
   }
@@ -872,6 +898,12 @@ h3 {
   border-radius: 16px;
   background-color: #F2785C;
 }
+@media (max-width: 850px) {
+  .steps-item__img {
+    width: 85px;
+    height: 85px;
+  }
+}
 @media (max-width: 600px) {
   .steps-item__img {
     width: 70px;
@@ -885,6 +917,16 @@ h3 {
   font-weight: normal;
   font-style: normal;
   color: rgb(13, 96, 111);
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .steps-item__text {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+    width: 80px;
+  }
 }
 @media (max-width: 600px) {
   .steps-item__text {
@@ -892,7 +934,6 @@ h3 {
     line-height: 1.2rem;
     font-weight: normal;
     font-style: normal;
-    text-align: center;
     width: 80px;
   }
 }
