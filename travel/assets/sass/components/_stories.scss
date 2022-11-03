@@ -10,6 +10,26 @@
     background-image: url(../../assets/img/background/background-2.jpg);
     width: 100%;
     height: 1331px;
+    @include media-dekstop {
+        background-image: url(../../assets/img/background/background-2.jpg);
+        width: 100%;
+        height: 1195px;
+    }
+
+    @include media-laptop {
+        background-image: url(../../assets/img/background/background-2.jpg);
+        width: 100%;
+        height: 960px;
+    }
+
+    @include media-tablet {
+        background-image: url(../../assets/img/background/background-2.jpg);
+        width: 100%;
+        height: 870px;
+    }
+
+
+
     @include media-mobile {
         background-image: url(../../assets/img/background/background-2-mobile.jpg);
         height: 693px;
@@ -23,9 +43,27 @@
     padding-top: 40px;
     padding-bottom: 41px;
     position: relative;
+    width: 100%;
+
+    @include media-dekstop {
+        padding-top: 25px;
+        height: 1135px;
+    }
+
+    @include media-laptop {
+        padding-top: 20px;
+        height: 890px;
+    }
+
+    @include media-tablet {
+        padding-top: 15px;
+        height: 810px;
+    }
+
+
     @include media-mobile {
         padding-top: 10px;
-        height: 628px;
+        height: 641px;
     }
 
 }
@@ -42,24 +80,22 @@
 .article {
     display: flex;
     gap: 40px;
+
+    @include media-laptop {
+        gap: 30px;
+    }
+    @include media-tablet {
+        gap: 20px;
+    }
     @include media-mobile {
         gap: 10px;
-    }
-}
-
-.article__image  {
-    height: 250px;
-    @include media-mobile {
-        height: 130px;
     }
 }
 
 .article__image img {
     border-radius: 16px;
     box-shadow: 0px 4px 4px #0D606F;
-    @include media-dekstop {
-        background-size: 120% 100%;
-    }
+
 }
 
 .article-info {
@@ -70,6 +106,19 @@
 
 .article-info__title {
     margin-bottom: 24px;
+
+    @include media-dekstop {
+        margin-bottom: 20px;
+    }
+
+    @include media-laptop {
+        margin-bottom: 16px;
+    }
+
+    @include media-tablet {
+        margin-bottom: 14px;
+    }
+
     @include media-mobile {
         margin-bottom: 10px;
     }
@@ -86,9 +135,13 @@
     @include media-laptop {
         @include font ($size: 1.3rem);
     }
-    @include media-mobile {
+
+    @include media-tablet {
+        @include font ($size: 1.1rem);
+    }
+    @include media-tablet {
         @include font ($size: 0.9rem, $height: 1.08rem);
-        height: 86px;
+        max-height: 86px;
     }
 
 }
@@ -101,6 +154,13 @@
     cursor: pointer;
     @include media-dekstop {
         @include font ($size: 1.5rem, $height: 1.7rem, $weight:bold);
+    }
+    @include media-laptop {
+        @include font ($size: 1.3rem, $weight:bold);
+    }
+
+    @include media-tablet {
+        @include font ($size: 1.1rem, $weight:bold);
     }
     @include media-mobile {
         @include font ($size: 0.9rem, $height: 1.08rem, $weight:bold);
