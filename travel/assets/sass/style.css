@@ -334,7 +334,7 @@ p {
   margin: 0;
 }
 
-.navigation__link > a, .twitter-icon, .youtube-icon, .instagram-icon, .rs-school-icon, .logo__text, .logo__icon, .button {
+.slider-center, .slider-left, .slider-right, .navigation__link > a, .twitter-icon, .youtube-icon, .instagram-icon, .rs-school-icon, .logo__text, .logo__icon, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -1054,6 +1054,18 @@ h3 {
   .slider {
     display: none;
   }
+}
+
+.slider-right {
+  transform: translateX(-800px);
+}
+
+.slider-left {
+  transform: translateX(800px);
+}
+
+.slider-center {
+  transform: translateX(0px);
 }
 
 .slider__item {

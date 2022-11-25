@@ -43,6 +43,25 @@
     }
 }
 
+.slider-right {
+    transform: translateX(-800px);
+    @extend %transition;
+
+}
+
+.slider-left {
+    transform: translateX(800px);
+    @extend %transition;
+
+}
+
+.slider-center {
+    transform: translateX(0px);
+    @extend %transition;
+
+}
+
+
 .slider__item {
     position: relative;
 
@@ -78,6 +97,7 @@
 
 
 }
+
 
 .slider-buttons {
     display: flex;
