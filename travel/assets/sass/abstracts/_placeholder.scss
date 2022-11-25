@@ -2,6 +2,10 @@
     transition: all .3s ease-out;
 }
 
+%transition-slider {
+    transition: all 1.0s ease-out;
+}
+
 %box-shadow {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }

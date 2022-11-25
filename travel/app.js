@@ -2,35 +2,23 @@ console.log("Alert");
 
 /* Slider desktop version */
 const slider = document.querySelector('.slider');
+
 const sliderOne = document.querySelector('.slider-one');
 const sliderTwo = document.querySelector('.slider-two');
 const sliderThree = document.querySelector('.slider-three');
 
-
-const salom1 = () => {
-    alert("salom1")
-}
-
-const salom2 = () => {
-    alert("salom2")
-}
-
-const salom3 = () => {
-    alert("salom3")
-}
-
-
-
-// sliderOne.addEventListener('click', salom1);
-// sliderTwo.addEventListener('click', salom2);
-// sliderThree.addEventListener('click', salom3);
-
+const sliderButtonOne = document.querySelector('.slider-button-one');
+const sliderButtonTwo = document.querySelector('.slider-button-two');
+const sliderButtonThree = document.querySelector('.slider-button-three');
 
 
 sliderOne.addEventListener("click", () =>{
     slider.classList.add('slider-left');
     slider.classList.remove('slider-center');
 
+    sliderButtonOne.classList.add('slider-button-active');
+    sliderButtonTwo.classList.remove('slider-button-active');
+    sliderButtonThree.classList.remove('slider-button-active');
 
 })
 
@@ -39,6 +27,9 @@ sliderTwo.addEventListener("click", () =>{
     slider.classList.remove('slider-left');
     slider.classList.remove('slider-right');
 
+    sliderButtonOne.classList.remove('slider-button-active');
+    sliderButtonTwo.classList.add('slider-button-active');
+    sliderButtonThree.classList.remove('slider-button-active');
 
 })
 
@@ -46,27 +37,104 @@ sliderThree.addEventListener("click", () =>{
     slider.classList.add('slider-right');
     slider.classList.remove('slider-center');
 
+    sliderButtonOne.classList.remove('slider-button-active');
+    sliderButtonTwo.classList.remove('slider-button-active');
+    sliderButtonThree.classList.add('slider-button-active');
 
 })
 
 
 
 
+// /* Slider mobile version */
+
+// const sliderMobileItem = document.querySelectorAll('.slider-mobile__item');
+
+// sliderMobileItem.forEach((slide, index) => {
+//     slide.style.transform = `translateX({$index * 100}%)`;
+// })
+
+
+// // current slide counter
+// let curSlide = 0;
+
+// // select next slide button
+// const nextSlide = document.querySelector(".slider-mobile-arrow-right");
+
+// // add event listener and next slide functionality
+// nextSlide.addEventListener("click", function () {
+//     curSlide++;
+
+// sliderMobileItem.forEach((slide, indx) => {
+//    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+//  });
+// });
 
 
 
 
 
+/* 3123213 */
+
+"use strict";
+// Select all slides
+const slides = document.querySelectorAll(".slider-mobile__item");
+const mobileButtons = document.querySelectorAll('.slider-mobile-button');
+
+console.log(slides);
+
+// loop through slides and set each slides translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide = document.querySelector(".slider-mobile-arrow-right");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+
+//   mobileButtons.forEach((button) => {
+//     button.classList.toggle('slider-mobile-button-active');
+//   });
 
 
 
+});
 
+// select next slide button
+const prevSlide = document.querySelector(".slider-mobile-arrow-left");
 
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
 
-
-
-
-
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
 
 
 
