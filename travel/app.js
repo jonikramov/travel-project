@@ -134,11 +134,11 @@ prevSlide.addEventListener("click", function () {
 });
 
 
+/* Burger menu */
 const burgerIcon = document.querySelector('.hamburger');
 const menuBurger = document.querySelector('.hamburger__menu');
 const burgerCloseIcon = document.querySelector('.hamburger__close');
 const overlay = document.querySelector('.overlay');
-
 
 burgerIcon.addEventListener('click', () => {
   menuBurger.classList.toggle('hamburger__menu-active');
@@ -148,6 +148,7 @@ burgerIcon.addEventListener('click', () => {
 overlay.addEventListener('click', () => {
   menuBurger.classList.toggle('hamburger__menu-active');
   overlay.classList.toggle('overlay-active');
+  loginPopUp.classList.toggle('login-popup-active');
 })
 
 burgerCloseIcon.addEventListener('click', () => {
@@ -155,11 +156,14 @@ burgerCloseIcon.addEventListener('click', () => {
   overlay.classList.toggle('overlay-active');
 })
 
+const account = document.querySelector('.account')
+const loginBtn = document.querySelector('.button_header')
+const loginPopUp = document.querySelector('.login-popup')
 
-
-
-
-
+loginBtn.addEventListener('click', () => {
+  loginPopUp.classList.toggle('login-popup-active');
+  overlay.classList.toggle('overlay-active');
+})
 
 
 

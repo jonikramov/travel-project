@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -342,16 +343,20 @@ p {
   transition: all 1s ease-out;
 }
 
-body, .button {
+.button-sign-in, .button-google, .button-fb, body, .button {
   font-family: "Red Hat Text", "Verdana", sans-serif;
 }
 
-.read-more, .article-info__text, .steps-item__text, .preview__search-text, .preview__subtitle, .logo__text, h3, h1 {
+.read-more, .article-info__text, .steps-item__text, .preview__search-text, .preview__subtitle, .form-title, .or-text, .login-popup__title, .logo__text, h3, h1 {
   font-family: "Aleo", "Verdana", sans-serif;
 }
 
 .logo__text {
   font-family: "Magra", "Verdana", sans-serif;
+}
+
+.register, .have-account, .password-forgot {
+  font-family: "Aleo", "Verdana", sans-serif;
 }
 
 .button {
@@ -698,6 +703,186 @@ h3 {
 }
 .hamburger-navigation__link > a:hover {
   color: rgb(13, 96, 111);
+}
+
+.login-popup {
+  position: absolute;
+  left: calc(50% - 325px);
+  top: -810px;
+  width: 650px;
+  height: 660px;
+  border-radius: 16px;
+  background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  padding: 25px 45px 23px;
+  transition: all 0.75s;
+  z-index: 5;
+}
+
+.login-popup-active {
+  top: 150px;
+}
+
+.login-popup__title {
+  font-size: 3.2rem;
+  line-height: 3.84rem;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  color: rgb(13, 96, 111);
+  margin-bottom: 30px;
+}
+
+.button-popup {
+  height: 56px;
+  width: 560px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.button-fb {
+  background-color: #1877F2;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  line-height: 2.65rem;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.button-google {
+  background-color: rgb(255, 255, 255);
+  color: #0D606F;
+  font-size: 2rem;
+  line-height: 2.65rem;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.or {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.or-text {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgba(13, 96, 111, 0.5019607843);
+}
+
+.line-or {
+  height: 2px;
+  background-color: rgba(13, 96, 111, 0.5019607843);
+  width: 260px;
+  opacity: 0.5;
+}
+
+.form-title {
+  font-size: 1.6rem;
+  line-height: 1.92rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(13, 96, 111);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-popup {
+  width: 560px;
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+  outline: none;
+  padding: 10px 20px;
+  display: block;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(13, 96, 111);
+}
+.input-popup:focus {
+  border: 1px solid rgb(13, 96, 111);
+  box-shadow: none;
+}
+.input-popup:focus-visible {
+  outline: 0px solid rgb(13, 96, 111);
+  box-shadow: none;
+}
+
+.button-sign-in {
+  width: 560px;
+  height: 54px;
+  border-radius: 10px;
+  background: #0D606F;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 2rem;
+  line-height: 2.65rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.password-forgot {
+  margin-top: 10px;
+  text-align: center;
+  color: #0D606F;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.popup-line {
+  width: 560px;
+  height: 2px;
+  background-color: rgba(13, 96, 111, 0.5019607843);
+  margin-top: 26px;
+  opacity: 0.5;
+}
+
+.register-block {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.have-account {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #0D606F;
+  opacity: 0.5;
+}
+
+.register {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  opacity: 1;
+  color: #0D606F;
+  text-decoration: underline;
 }
 
 .wrapper {
