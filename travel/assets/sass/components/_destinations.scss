@@ -46,12 +46,31 @@
 .slider-right {
     transform: translateX(-800px);
     @extend %transition-slider;
+        @include media-dekstop {
+        transform: translateX(-600px);
+    }
+    @include media-laptop {
+        transform: translateX(-500px);
+    }
+    @include media-tablet {
+        transform: translateX(-400px);
+    }
 
 }
 
 .slider-left {
     transform: translateX(800px);
     @extend %transition-slider;
+
+    @include media-dekstop {
+        transform: translateX(600px);
+    }
+    @include media-laptop {
+        transform: translateX(500px);
+    }
+    @include media-tablet {
+        transform: translateX(400px);
+    }
 
 }
 
@@ -140,9 +159,6 @@
         max-width: 360px;
         overflow: hidden;
         border-radius: 16px;
-
-
-
     }
 }
 
@@ -153,7 +169,6 @@
     transition: all .75s;
     display: block;
     border-radius: 16px;
-
 
 }
 

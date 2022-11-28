@@ -9,7 +9,21 @@
     <title>Travel</title>
 </head>
 <body>
-    <header class="header">
+    <div class="overlay"></div>
+    <div class="hamburger__menu">
+        <div class="hamburger__menu-wrapper">
+            <div class="hamburger__close"></div>
+            <ul class="hamburger-navigation">
+                <li class="hamburger-navigation__link"><a href="#preview">How It Works</a></li>
+                <li class="hamburger-navigation__link"><a href="#steps">Plan Your Trip</a></li>
+                <li class="hamburger-navigation__link"><a href="#destinations">Destinations</a></li>
+                <li class="hamburger-navigation__link"><a href="#stories">Travel Stories</a></li>
+                <li class="hamburger-navigation__link"><a href="#header">Account</a></li>
+                <li class="hamburger-navigation__link"><a href="#footer">Social Media</a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="header" id="header">
         <div class="wrapper header__wrapper">
             <a class="logo" href="index.html">
                 <span class="logo__icon"></span>
@@ -107,16 +121,12 @@
                         <p class="slider-mobile__item-text">USA</p>
                     </div>
 
-
-
-
-
-                    <div class="slider-mobile-arrow-left"></div>
-                    <div class="slider-mobile-arrow-right"></div>
+                    <div class="slider-mobile-arrow-left" ></div>
+                    <div class="slider-mobile-arrow-right" ></div>
                     <div class="slider-mobile-buttons">
-                        <div class="slider-mobile-button slider-mobile-button-active"></div>
-                        <div class="slider-mobile-button "></div>
-                        <div class="slider-mobile-button"></div>
+                        <div id="point-1" class="slider-mobile-button point1 slider-mobile-button-active"></div>
+                        <div id="point-2" class="slider-mobile-button point2"></div>
+                        <div id="point-3" class="slider-mobile-button point3"></div>
                     </div>
                 </div>
                 <div class="slider-buttons">
@@ -212,7 +222,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="wrapper footer__wrapper">
             <a class="rs-school-link" href="https://rs.school/js-stage0/" target="_blank">
                 <span class="rs-school-icon"></span>

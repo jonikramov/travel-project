@@ -1,4 +1,4 @@
-console.log("Alert");
+console.log("Work");
 
 /* Slider desktop version */
 const slider = document.querySelector('.slider');
@@ -43,45 +43,16 @@ sliderThree.addEventListener("click", () =>{
 
 })
 
-
-
-
-// /* Slider mobile version */
-
-// const sliderMobileItem = document.querySelectorAll('.slider-mobile__item');
-
-// sliderMobileItem.forEach((slide, index) => {
-//     slide.style.transform = `translateX({$index * 100}%)`;
-// })
-
-
-// // current slide counter
-// let curSlide = 0;
-
-// // select next slide button
-// const nextSlide = document.querySelector(".slider-mobile-arrow-right");
-
-// // add event listener and next slide functionality
-// nextSlide.addEventListener("click", function () {
-//     curSlide++;
-
-// sliderMobileItem.forEach((slide, indx) => {
-//    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-//  });
-// });
-
-
-
-
-
-/* 3123213 */
+/* Slider mobile version */
 
 "use strict";
 // Select all slides
 const slides = document.querySelectorAll(".slider-mobile__item");
-const mobileButtons = document.querySelectorAll('.slider-mobile-button');
 
-console.log(slides);
+const point = document.querySelector('.slider-mobile-button');
+const point1 = document.querySelector('.point1');
+const point2 = document.querySelector('.point2');
+const point3 = document.querySelector('.point3');
 
 // loop through slides and set each slides translateX
 slides.forEach((slide, indx) => {
@@ -96,11 +67,15 @@ let curSlide = 0;
 // maximum number of slides
 let maxSlide = slides.length - 1;
 
+
+
 // add event listener and navigation functionality
 nextSlide.addEventListener("click", function () {
+
   // check if current slide is the last and reset current slide
   if (curSlide === maxSlide) {
     curSlide = 0;
+
   } else {
     curSlide++;
   }
@@ -110,11 +85,19 @@ nextSlide.addEventListener("click", function () {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
 
-//   mobileButtons.forEach((button) => {
-//     button.classList.toggle('slider-mobile-button-active');
-//   });
-
-
+  if(point.id === 'point-1') {
+    point1.classList.remove('slider-mobile-button-active')
+    point.id = 'point-2'
+    point2.classList.add('slider-mobile-button-active')
+  } else if(point.id === 'point-2') {
+    point2.classList.remove('slider-mobile-button-active')
+    point.id = 'point-3'
+    point3.classList.add('slider-mobile-button-active')
+  } else if(point.id === 'point-3') {
+    point3.classList.remove('slider-mobile-button-active')
+    point.id = 'point-1'
+    point1.classList.add('slider-mobile-button-active')
+  }
 
 });
 
@@ -134,16 +117,43 @@ prevSlide.addEventListener("click", function () {
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
+
+  if(point.id === 'point-1') {
+    point1.classList.remove('slider-mobile-button-active')
+    point.id = 'point-3'
+    point3.classList.add('slider-mobile-button-active')
+  } else if(point.id === 'point-3') {
+    point3.classList.remove('slider-mobile-button-active')
+    point.id = 'point-2'
+    point2.classList.add('slider-mobile-button-active')
+  } else if(point.id === 'point-2') {
+    point2.classList.remove('slider-mobile-button-active')
+    point.id = 'point-1'
+    point1.classList.add('slider-mobile-button-active')
+  }
 });
 
 
+const burgerIcon = document.querySelector('.hamburger');
+const menuBurger = document.querySelector('.hamburger__menu');
+const burgerCloseIcon = document.querySelector('.hamburger__close');
+const overlay = document.querySelector('.overlay');
 
 
+burgerIcon.addEventListener('click', () => {
+  menuBurger.classList.toggle('hamburger__menu-active');
+  overlay.classList.toggle('overlay-active');
+})
 
+overlay.addEventListener('click', () => {
+  menuBurger.classList.toggle('hamburger__menu-active');
+  overlay.classList.toggle('overlay-active');
+})
 
-
-
-
+burgerCloseIcon.addEventListener('click', () => {
+  menuBurger.classList.toggle('hamburger__menu-active');
+  overlay.classList.toggle('overlay-active');
+})
 
 
 
