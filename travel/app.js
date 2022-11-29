@@ -1,4 +1,4 @@
-console.log("Work");
+console.log("JS works");
 
 /* Slider desktop version */
 const slider = document.querySelector('.slider');
