@@ -677,7 +677,7 @@ h3 {
 }
 
 .hamburger__close {
-  background: url(/assets/img/icons/burger-close.svg);
+  background: url(../../assets/img/icons/burger-close.svg);
   width: 15px;
   height: 15px;
   margin-bottom: 15px;
