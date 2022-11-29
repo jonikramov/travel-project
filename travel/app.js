@@ -141,28 +141,50 @@ const burgerCloseIcon = document.querySelector('.hamburger__close');
 const overlay = document.querySelector('.overlay');
 
 burgerIcon.addEventListener('click', () => {
-  menuBurger.classList.toggle('hamburger__menu-active');
-  overlay.classList.toggle('overlay-active');
+  menuBurger.classList.add('hamburger__menu-active');
+  overlay.classList.add('overlay-active');
 })
 
 overlay.addEventListener('click', () => {
-  menuBurger.classList.toggle('hamburger__menu-active');
-  overlay.classList.toggle('overlay-active');
-  loginPopUp.classList.toggle('login-popup-active');
+  menuBurger.classList.remove('hamburger__menu-active');
+  overlay.classList.remove('overlay-active');
+  loginPopUp.classList.remove('popup-active');
+  registerPopUp.classList.remove('register-popup-active');
+
 })
 
 burgerCloseIcon.addEventListener('click', () => {
-  menuBurger.classList.toggle('hamburger__menu-active');
-  overlay.classList.toggle('overlay-active');
+  menuBurger.classList.remove('hamburger__menu-active');
+  overlay.classList.remove('overlay-active');
 })
 
-const account = document.querySelector('.account')
 const loginBtn = document.querySelector('.button_header')
 const loginPopUp = document.querySelector('.login-popup')
+const account = document.querySelector('.account')
+const registerBtn = document.querySelector('.register')
+const registerPopUp = document.querySelector('.register-popup')
+const logIn = document.querySelector('.log-in')
 
 loginBtn.addEventListener('click', () => {
-  loginPopUp.classList.toggle('login-popup-active');
-  overlay.classList.toggle('overlay-active');
+  loginPopUp.classList.add('popup-active');
+  overlay.classList.add('overlay-active');
+  menuBurger.classList.remove('hamburger__menu-active');
+})
+
+account.addEventListener('click', () => {
+  loginPopUp.classList.add('popup-active');
+  overlay.classList.add('overlay-active');
+  menuBurger.classList.remove('hamburger__menu-active');
+})
+
+registerBtn.addEventListener('click', () => {
+  registerPopUp.classList.add('register-popup-active');
+  loginPopUp.classList.remove('popup-active');
+})
+
+logIn.addEventListener('click', () => {
+  registerPopUp.classList.remove('register-popup-active');
+  loginPopUp.classList.add('popup-active');
 })
 
 

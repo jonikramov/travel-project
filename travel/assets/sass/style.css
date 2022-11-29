@@ -355,7 +355,7 @@ p {
   font-family: "Magra", "Verdana", sans-serif;
 }
 
-.register, .have-account, .password-forgot {
+.log-in, .register, .have-account, .password-forgot {
   font-family: "Aleo", "Verdana", sans-serif;
 }
 
@@ -719,8 +719,20 @@ h3 {
   transition: all 0.75s;
   z-index: 5;
 }
+@media (max-width: 800px) {
+  .login-popup {
+    width: 450px;
+    left: calc(50% - 225px);
+  }
+}
+@media (max-width: 600px) {
+  .login-popup {
+    width: 350px;
+    left: calc(50% - 175px);
+  }
+}
 
-.login-popup-active {
+.popup-active {
   top: 150px;
 }
 
@@ -732,6 +744,14 @@ h3 {
   text-align: center;
   color: rgb(13, 96, 111);
   margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .login-popup__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    font-style: normal;
+  }
 }
 
 .button-popup {
@@ -746,6 +766,16 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
+@media (max-width: 800px) {
+  .button-popup {
+    width: 360px;
+  }
+}
+@media (max-width: 600px) {
+  .button-popup {
+    width: 260px;
+  }
+}
 
 .button-fb {
   background-color: #1877F2;
@@ -756,6 +786,14 @@ h3 {
   font-style: normal;
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  .button-fb {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 
 .button-google {
   background-color: rgb(255, 255, 255);
@@ -765,6 +803,14 @@ h3 {
   font-weight: 300;
   font-style: normal;
   margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .button-google {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .or {
@@ -780,6 +826,14 @@ h3 {
   font-weight: normal;
   font-style: normal;
   color: rgba(13, 96, 111, 0.5019607843);
+}
+@media (max-width: 600px) {
+  .or-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .line-or {
@@ -797,6 +851,14 @@ h3 {
   color: rgb(13, 96, 111);
   display: block;
   margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .form-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 .input-popup {
@@ -824,6 +886,16 @@ h3 {
   outline: 0px solid rgb(13, 96, 111);
   box-shadow: none;
 }
+@media (max-width: 800px) {
+  .input-popup {
+    width: 360px;
+  }
+}
+@media (max-width: 600px) {
+  .input-popup {
+    width: 260px;
+  }
+}
 
 .button-sign-in {
   width: 560px;
@@ -837,6 +909,20 @@ h3 {
   font-weight: normal;
   font-style: normal;
 }
+@media (max-width: 800px) {
+  .button-sign-in {
+    width: 360px;
+  }
+}
+@media (max-width: 600px) {
+  .button-sign-in {
+    width: 260px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 
 .password-forgot {
   margin-top: 10px;
@@ -848,6 +934,15 @@ h3 {
   font-style: normal;
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .password-forgot {
+    width: 260px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 
 .popup-line {
   width: 560px;
@@ -855,6 +950,16 @@ h3 {
   background-color: rgba(13, 96, 111, 0.5019607843);
   margin-top: 26px;
   opacity: 0.5;
+}
+@media (max-width: 800px) {
+  .popup-line {
+    width: 360px;
+  }
+}
+@media (max-width: 600px) {
+  .popup-line {
+    width: 260px;
+  }
 }
 
 .register-block {
@@ -876,6 +981,47 @@ h3 {
 }
 
 .register {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  opacity: 1;
+  color: #0D606F;
+  text-decoration: underline;
+}
+
+.register-popup {
+  position: absolute;
+  left: calc(50% - 325px);
+  top: -600px;
+  width: 650px;
+  height: 436px;
+  border-radius: 16px;
+  background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  padding: 25px 45px 23px;
+  transition: all 0.75s;
+  z-index: 5;
+}
+@media (max-width: 800px) {
+  .register-popup {
+    width: 450px;
+    left: calc(50% - 225px);
+  }
+}
+@media (max-width: 600px) {
+  .register-popup {
+    width: 350px;
+    left: calc(50% - 175px);
+  }
+}
+
+.register-popup-active {
+  top: 150px;
+}
+
+.log-in {
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-weight: 700;
