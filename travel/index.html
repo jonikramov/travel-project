@@ -9,7 +9,68 @@
     <title>Travel</title>
 </head>
 <body>
-    <header class="header">
+    <div class="overlay"></div>
+    <div class="hamburger__menu">
+        <div class="hamburger__menu-wrapper">
+            <div class="hamburger__close"></div>
+            <ul class="hamburger-navigation">
+                <li class="hamburger-navigation__link"><a href="#preview">How It Works</a></li>
+                <li class="hamburger-navigation__link"><a href="#steps">Plan Your Trip</a></li>
+                <li class="hamburger-navigation__link"><a href="#destinations">Destinations</a></li>
+                <li class="hamburger-navigation__link"><a href="#stories">Travel Stories</a></li>
+                <li class="hamburger-navigation__link account"><a href="#header">Account</a></li>
+                <li class="hamburger-navigation__link"><a href="#footer">Social Media</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-popup">
+        <p class="login-popup__title">Log in to your account</p>
+        <button class="button-popup button-fb">
+            <img src="/assets/img/icons/fb-icon.svg" alt="fb">
+            <p>Sign In with Facebook</p>
+        </button>
+        <button class="button-popup button-google">
+            <img src="/assets/img/icons/google-icon.svg" alt="google">
+            <p>Sign In with Google</p>
+        </button>
+        <div class="or">
+            <div class="line-or"></div>
+            <p class="or-text">or</p>
+            <div class="line-or"></div>
+        </div>
+        <form class="form">
+            <label class="form-title" for="">E-mail</label>
+            <input class="input-popup" type="email">
+            <label class="form-title" for="">Password</label>
+            <input class="input-popup" type="password">
+        </form>
+        <button class="button-sign-in">Sign In</button>
+        <p class="password-forgot">Forgot Your Password?</p>
+        <div class="popup-line"></div>
+        <div class="register-block">
+            <p class="have-account">Don’t have an account? </p>
+            <span class="register">Register</span>
+        </div>
+    </div>
+
+    <div class="register-popup">
+        <p class="login-popup__title">Create account</p>
+        <form class="form">
+            <label class="form-title" for="">E-mail</label>
+            <input class="input-popup" type="email">
+            <label class="form-title" for="">Password</label>
+            <input class="input-popup" type="password">
+        </form>
+        <button class="button-sign-in">Sign Up</button>
+        <div class="popup-line"></div>
+        <div class="register-block">
+            <p class="have-account">Already have an account?  </p>
+            <span class="log-in">Log in</span>
+        </div>
+    </div>
+
+    <header class="header" id="header">
         <div class="wrapper header__wrapper">
             <a class="logo" href="index.html">
                 <span class="logo__icon"></span>
@@ -80,15 +141,15 @@
             <div class="wrapper">
                 <h2 class="destinations__title">POPULAR DESTINATIONS</h2>
                 <div class="slider">
-                    <div class="slider__item">
+                    <div class="slider__item slider-one">
                         <img class="slider__item-img" src="assets/img/destinations/spain.jpg" alt="spain">
                         <p class="slider__item-text">SPAIN</p>
                     </div>
-                    <div class="slider__item">
+                    <div class="slider__item slider-two">
                         <img class="slider__item-img" src="assets/img/destinations/japan.jpg" alt="japan">
                         <p class="slider__item-text">JAPAN</p>
                     </div>
-                    <div class="slider__item">
+                    <div class="slider__item slider-three">
                         <img class="slider__item-img" src="assets/img/destinations/usa.jpg" alt="usa">
                         <p class="slider__item-text">USA</p>
                     </div>
@@ -98,18 +159,27 @@
                         <img class="slider-mobile__item-img" src="assets/img/destinations/spain-mobile.jpg" alt="spain" height="210">
                         <p class="slider-mobile__item-text">SPAIN</p>
                     </div>
-                    <div class="slider-mobile-arrow-left"></div>
-                    <div class="slider-mobile-arrow-right"></div>
+                    <div class="slider-mobile__item">
+                        <img class="slider-mobile__item-img" src="assets/img/destinations/japan-mobile.jpg" alt="japan" height="210">
+                        <p class="slider-mobile__item-text">JAPAN</p>
+                    </div>
+                    <div class="slider-mobile__item">
+                        <img class="slider-mobile__item-img" src="assets/img/destinations/usa-mobile.jpg" alt="usa" height="210">
+                        <p class="slider-mobile__item-text">USA</p>
+                    </div>
+
+                    <div class="slider-mobile-arrow-left" ></div>
+                    <div class="slider-mobile-arrow-right" ></div>
                     <div class="slider-mobile-buttons">
-                        <div class="slider-mobile-button slider-mobile-button-active"></div>
-                        <div class="slider-mobile-button"></div>
-                        <div class="slider-mobile-button"></div>
+                        <div id="point-1" class="slider-mobile-button point1 slider-mobile-button-active"></div>
+                        <div id="point-2" class="slider-mobile-button point2"></div>
+                        <div id="point-3" class="slider-mobile-button point3"></div>
                     </div>
                 </div>
                 <div class="slider-buttons">
-                    <div class="slider-button"></div>
-                    <div class="slider-button"></div>
-                    <div class="slider-button"></div>
+                    <div class="slider-button slider-button-one"></div>
+                    <div class="slider-button slider-button-two slider-button-active"></div>
+                    <div class="slider-button slider-button-three"></div>
                 </div>
                 <div class="destinations-button">
                     <button class="button button_add">
@@ -199,7 +269,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="wrapper footer__wrapper">
             <a class="rs-school-link" href="https://rs.school/js-stage0/" target="_blank">
                 <span class="rs-school-icon"></span>
@@ -218,8 +288,31 @@
             </div>
         </div>
     </footer>
+    <script src="/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

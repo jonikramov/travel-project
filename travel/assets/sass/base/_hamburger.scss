@@ -20,7 +20,7 @@
     @include media-laptop {
         display: inline-block;
     }
- 
+
     &:before {
         @extend %hamburger-line;
         top: 0;
@@ -41,6 +41,73 @@
     top: calc(50% - 1.5px);
     left: 0;
 }
+
+
+.hamburger__menu {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    width: 165px;
+    height: 250px;
+    background-color: $color-primary;
+    border-radius: 10px;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    transition: all 0.75s;
+    z-index: 5;
+
+}
+
+.hamburger__menu-active {
+    top: 0;
+}
+
+.hamburger__menu-wrapper {
+    padding: 15px 15px 30px 15.5px;
+}
+
+.hamburger__close {
+    background: url(/assets/img/icons/burger-close.svg);
+    width: 15px;
+    height: 15px;
+    margin-bottom: 15px;
+}
+
+
+.hamburger-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+.hamburger-navigation__link {
+    text-align: right;
+}
+
+.hamburger-navigation__link > a {
+    color:$color-light;
+    @extend %transition;
+    user-select: none;
+
+
+    &:hover {
+        color: $color-additional;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

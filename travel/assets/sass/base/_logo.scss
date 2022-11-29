@@ -4,6 +4,8 @@
     gap: 6px;
     cursor: pointer;
     user-select: none;
+    position: relative;
+    z-index: 0;
 
     &:hover {
         .logo__text {
@@ -30,7 +32,7 @@
     color: $color-light;
     user-select: none;
     @extend %transition;
-    
+
     @include media-laptop {
         display: none;
     }

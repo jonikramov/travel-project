@@ -43,6 +43,44 @@
     }
 }
 
+.slider-right {
+    transform: translateX(-800px);
+    @extend %transition-slider;
+        @include media-dekstop {
+        transform: translateX(-600px);
+    }
+    @include media-laptop {
+        transform: translateX(-500px);
+    }
+    @include media-tablet {
+        transform: translateX(-400px);
+    }
+
+}
+
+.slider-left {
+    transform: translateX(800px);
+    @extend %transition-slider;
+
+    @include media-dekstop {
+        transform: translateX(600px);
+    }
+    @include media-laptop {
+        transform: translateX(500px);
+    }
+    @include media-tablet {
+        transform: translateX(400px);
+    }
+
+}
+
+.slider-center {
+    transform: translateX(0px);
+    @extend %transition-slider;
+
+}
+
+
 .slider__item {
     position: relative;
 
@@ -79,6 +117,7 @@
 
 }
 
+
 .slider-buttons {
     display: flex;
     justify-content: center;
@@ -113,13 +152,29 @@
 .slider-mobile {
     display: none;
     @include media-mobile {
-        display: block;
+        display: flex;
         position: relative;
+        width: 100%;
+        height: 210px;
+        max-width: 360px;
+        overflow: hidden;
+        border-radius: 16px;
     }
+}
+
+.slider-mobile__item {
+    position: absolute;
+    height: 210px;
+    max-width: 360px;
+    transition: all .75s;
+    display: block;
+    border-radius: 16px;
+
 }
 
 .slider-mobile__item-img {
     border-radius: 16px;
+    display: block;
 }
 
 .slider-mobile__item-text {
@@ -131,7 +186,7 @@
 
 .slider-mobile-arrow-right {
     position: absolute;
-    background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+    background-image: url(../../assets/img/icons/slider-arrow-mobile.svg);
     width: 15px;
     height: 26px;
     top: 93px;
@@ -140,7 +195,7 @@
 
 .slider-mobile-arrow-left {
     position: absolute;
-    background-image: url(/travel/assets/img/icons/slider-arrow-mobile.svg);
+    background-image: url(../../assets/img/icons/slider-arrow-mobile.svg);
     width: 15px;
     height: 26px;
     transform: rotate(-180deg);
